@@ -1,5 +1,6 @@
 variable "client_cidr" {
   type        = string
+  default     = "20.1.0.0/16"
   description = "Network CIDR to use for clients"
 }
 
@@ -23,6 +24,7 @@ variable "authentication_type" {
 
 variable "organization_name" {
   type        = string
+  default     = "dotapy-demo"
   description = "Name of organization to use in private certificate"
 }
 
@@ -34,6 +36,7 @@ variable "retention_in_days" {
 
 variable "logging_stream_name" {
   type        = string
+  default     = var.organization_name
   description = "Names of stream used for logging"
 }
 
